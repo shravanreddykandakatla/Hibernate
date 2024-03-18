@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--Bind to grammar/schema...-->
+<hibernate-mapping>
+    <class name="co.hibernate.entity.Student" table="student">
+        <id name="studentId" column="studid">
+            <!--to manually assign value-->
+<!--            <generator class="assigned"/> -->
+            <!--Auto increment-->
+            <generator class="increment"/>
+
+        </id>
+        <property name="studentName" column="sname"/>
+        <property name="studentEmail" column="email"/>
+
+    </class>
+</hibernate-mapping>

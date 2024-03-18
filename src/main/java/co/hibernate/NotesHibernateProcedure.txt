@@ -1,0 +1,25 @@
+*****Hibernate*****
+Hibernate is an ORM(Object Relational Mapping) Framework.
+In Hibernate a Java Object can be mapped with Database Table.
+
+*****Procedure to use hibernate*****
+1) Create a DB Table in Oracle/MySql
+2) Create a Java Entity class to map with DB table.
+3) Create a Hibernate Mapping File
+    for example: if you have student table you create Java Entity class for Student like in step 2.
+    then you will create a Hibernate mapping file: student.hbm.xml
+    this file will contain the mapping of:
+      ->entity class name to table name,
+      ->id(primary key) here we are giving the property name of ID in entity class and column name of ID in DB. Also, we use generator class in id which say how ID is being generated.
+      ->Similary will provide other properties name and column name here.
+4) To provide the complete configuration details we will create another XML file hibernate.cfg.xml
+    -> In this file we provide Session Factory and inside session factory we provide DB connection details
+    -> Also we provide Hibernate Properties like Dialect class name(Dialect class is used for creating required sql queries by Hibernate, show_sql(this will print the query), etc..
+    -> Then we provide Hibernate mapping file details created in step 3 here
+5) We Create a class for example: SaveStudent this class is for performing DB operations using hibernate.
+    ->First create a Configuration Object. Using config object we call "hibernate.cfg.xml".
+    ->Then we create SessionFactory Object to create a Session Object, using th session object we read the DB config details from XML.
+    ->Then we create a Transaction object.
+    ->Then we create a Entity Class Object and assign values to it.
+    -> Using the session object we perform save operation and to that operation we pass entity object
+
