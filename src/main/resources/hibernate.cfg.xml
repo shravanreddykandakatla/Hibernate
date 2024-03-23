@@ -10,9 +10,15 @@
         <!--Hibernate Properties -->
         <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
         <property name="show_sql">true</property>
+        <property name="hbm2ddl.auto">update</property>
+
 
         <!--Mapping Resources -->
         <mapping resource="student.hbm.xml"/>
+        <!--Mapping Class(we use this when we use annotations for Mapping rather than xml file-->
+        <mapping class="co.hibernateWithoutMappingFile.entity.Product"/>
+        <mapping class="co.hibernateRDBMS.entity.Faculty"/>
+        <mapping class="co.hibernateRDBMS.entity.Batch"/>
 
     </session-factory>
 </hibernate-configuration>

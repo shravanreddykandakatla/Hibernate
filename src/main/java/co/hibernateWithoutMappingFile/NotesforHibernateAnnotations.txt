@@ -1,0 +1,16 @@
+###We use annotations instead of below xml file
+
+<hibernate-mapping>
+    <class name="co.hibernate.entity.Student" table="student">
+        <id name="studentId" column="studid">
+            <!--to manually assign value-->
+<!--            <generator class="assigned"/> -->
+            <!--Auto increment-->
+            <generator class="increment"/>
+
+        </id>
+        <property name="studentName" column="sname"/>
+        <property name="studentEmail" column="email"/>
+
+    </class>
+</hibernate-mapping>
