@@ -18,19 +18,21 @@ public class FacultyBatchRelationship {
         Transaction tx=session.beginTransaction();
 
         Faculty faculty=new Faculty();
-        faculty.setFacultyId(101);
-        faculty.setFacultyName("Shravan");
+        faculty.setFacultyId(102);
+        faculty.setFacultyName("Sumith");
 
-        Batch batch1=new Batch("Java Certification",faculty);
-        Batch batch2=new Batch("Spring Certification",faculty);
-        Batch batch3=new Batch("Microservices Certification",faculty);
+        Batch batch1=new Batch("Java",faculty);
+        Batch batch2=new Batch("Spring",faculty);
+        Batch batch3=new Batch("Microservices",faculty);
 
         Set<Batch> batches= new HashSet<Batch>();
         batches.add(batch1);
         batches.add(batch2);
         batches.add(batch3);
 
-        System.out.println(batches);
+        int size=batches.size();
+
+        System.out.println(size);
 
         faculty.setBatches(batches);
 

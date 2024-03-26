@@ -2,6 +2,7 @@
 <!--Bind to grammar/schema...-->
 <hibernate-mapping>
     <class name="co.hibernate.entity.Student" table="student">
+        <cache usage="read-write"/>
         <id name="studentId" column="studid">
             <!--to manually assign value-->
 <!--            <generator class="assigned"/> -->
